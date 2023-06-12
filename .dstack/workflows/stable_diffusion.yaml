@@ -1,0 +1,10 @@
+workflows:
+  - name: stable-diffusion
+    provider: bash
+    commands:
+      - pip install -r stable_diffusion/requirements.txt
+      - python stable_diffusion/stable_diffusion.py
+    artifacts:
+      - path: ./models
+    resources:
+      memory: 16GB
