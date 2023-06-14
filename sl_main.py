@@ -32,6 +32,7 @@ if uploaded_file is not None:
 
         image = Image.open(uploaded_file)
         img64 = pil_image_to_base64(image)
+
         js = ControlnetRequest(img64,
                                correct_prompt(add_lora(translate_prompt(prompt))),
                                correct_neg_prompt(neg_prompt), url="https://bf2cfeffaebceabd24.gradio.live")\
