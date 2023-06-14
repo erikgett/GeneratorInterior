@@ -34,7 +34,8 @@ if uploaded_file is not None:
         img64 = pil_image_to_base64(image)
         js = ControlnetRequest(img64,
                                correct_prompt(add_lora(translate_prompt(prompt))),
-                               correct_neg_prompt(neg_prompt)).send_request()
+                               correct_neg_prompt(neg_prompt), url="https://bf2cfeffaebceabd24.gradio.live")\
+            .send_request()
 
         image_bytes = base64.b64decode(js['images'][0])
         image = Image.open(io.BytesIO(image_bytes))
