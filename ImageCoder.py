@@ -26,3 +26,14 @@ def show_b64_image(b64_image):
 
     plt.imshow(i, interpolation='nearest')
     plt.show()
+
+def pil_image_to_base64(image):
+    # Convert the image to a byte stream
+    image_byte_array = io.BytesIO()
+    image.save(image_byte_array, format='JPEG')
+    image_byte_array = image_byte_array.getvalue()
+
+    # Encode the byte stream as Base64
+    base64_image = base64.b64encode(image_byte_array).decode('utf-8')
+
+    return base64_image
