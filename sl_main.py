@@ -39,4 +39,3 @@ if uploaded_file is not None:
         image_bytes = base64.b64decode(js['images'][0])
         image = Image.open(io.BytesIO(image_bytes))
         st.image(image, caption="Результат генерации")
-
