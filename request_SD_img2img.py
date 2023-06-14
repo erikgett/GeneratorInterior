@@ -48,8 +48,8 @@ class ControlnetRequest:
                 {
                     "input_image": "",
                     "mask": "",
-                    "module": "canny",
-                    "model": "control_canny-fp16 [e3fe7712]",
+                    "module": "depth_midas",
+                    "model": "control_depth-fp16 [400750f6]",
                     "weight": 1,
                     "resize_mode": "Crop and Resize",
                     "lowvram": False,
