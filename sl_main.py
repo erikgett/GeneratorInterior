@@ -4,13 +4,13 @@ from request_SD_img2img import *
 from prompt_editor import translate_prompt, add_lora, correct_neg_prompt, correct_prompt
 from PIL import Image
 
-st.write("# Получение дизайна планировки по изображению")
+st.write("# Генерация интерьера помещения по изображению")
 
-prompt = st.text_input("Введите положительную подсказка")
+prompt = st.text_input("Введите положительное описание изображения")
 if prompt:
     st.write("Перевод подсказки на английском:", translate_prompt(prompt))
 
-neg_prompt = st.text_input("Введите негативную подсказка")
+neg_prompt = st.text_input("Введите негативное описание изображения (что не нужно включать в изображение)")
 if neg_prompt:
     st.write("Перевод негативной подсказки на английском:", translate_prompt(neg_prompt))
 
