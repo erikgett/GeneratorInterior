@@ -35,7 +35,7 @@ if uploaded_file is not None:
 
         js = ControlnetRequest(img64,
                                correct_prompt(add_lora(translate_prompt(prompt))),
-                               correct_neg_prompt(neg_prompt), url="https://bf2cfeffaebceabd24.gradio.live")\
+                               correct_neg_prompt(neg_prompt), url="https://4f1240d203081e3426.gradio.live")\
             .send_request()
 
         image_bytes = base64.b64decode(js['images'][0])
